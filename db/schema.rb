@@ -11,12 +11,19 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20170518100126) do
+ActiveRecord::Schema.define(:version => 20170518103223) do
 
   create_table "on_default_dbs", :force => true do |t|
     t.string   "name"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+  end
+
+  create_table "on_second_db_children", :force => true do |t|
+    t.integer  "on_second_db"
+    t.string   "name"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
   end
 
   create_table "on_second_dbs", :force => true do |t|
